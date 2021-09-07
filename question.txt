@@ -10,7 +10,16 @@ Restaurants =
 		photo: "..............."		
 	},
 	{
+		id: 234,
+		name: "PQR",
+		location: "Ahemdabad",
+		ratings: 4.6
+		ETA: 30,
+		tags: ["Mexican", "Chinese", "Quick"],	
+		photo: "..............."	
 	},
+	{...},
+	...
 ];
 
 Ask:
