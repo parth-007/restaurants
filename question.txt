@@ -23,6 +23,7 @@ Restaurants =
 ];
 
 Ask:
+Develop using HTML, CSS and Vanila JS
 1. Show data in console [Fetch API]
 2. Render cards
 3. Search bar
