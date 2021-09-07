@@ -1,0 +1,29 @@
+Restaurants = 
+[
+	{
+		id: 123,
+		name: "ABC",
+		location: "Surat",
+		ratings: 4.3
+		ETA: 25,
+		tags: ["American", "Chinese", "Healthy"],	
+		photo: "..............."		
+	},
+	{
+	},
+];
+
+Ask:
+1. Show data in console [Fetch API]
+2. Render cards
+3. Search bar
+4. Filter on Tags [Dropdown]
+5. Sort on Name, ETA, ratings, location [Dropdown]
+6. Favorites [Mark the resturant as favorites, Top Right - Checkbox]
+7. On app, Top right [A slider when "ON", show the restaurants which are marked as fav][Persistent][localStorage]
+
+Extra marks:
+1. Debounced
+2. Event delegation
+3. _loadash functions use
+4. Pagination
