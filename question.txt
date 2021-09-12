@@ -3,20 +3,36 @@ Restaurants =
 	{
 		id: 123,
 		name: "ABC",
-		location: "Surat",
-		ratings: 4.3
+		website: "www.abc.com",
 		ETA: 25,
-		tags: ["American", "Chinese", "Healthy"],	
-		photo: "..............."		
+		ratings: 4.3,
+		description: "FGDSFDGFS",
+		avgBill2: 433,
+		tags: ["American", "Chinese", "Healthy"],
+		address: {
+			location: "AAA",
+			line1: "GG",
+			line2: "FGDG",
+			phone: 4343
+		},
+		pic: "..............."		
 	},
 	{
 		id: 234,
 		name: "PQR",
-		location: "Ahemdabad",
-		ratings: 4.6
+		website: "www.pqr.com",
 		ETA: 30,
+		ratings: 4.6,
+		description: "SDGFSD",
+		avgBill2: 433,
 		tags: ["Mexican", "Chinese", "Quick"],	
-		photo: "..............."	
+		address: {
+			location: "GDF",
+			line1: "CC",
+			line2: "QQ",
+			phone: 1212
+		},
+		pic: "..............."	
 	},
 	{...},
 	...
@@ -26,14 +42,17 @@ Ask:
 Develop using HTML, CSS and Vanila JS
 1. Show data in console [Fetch API]
 2. Render cards
-3. Search bar
+3. Search bar [Search on name]
 4. Filter on Tags [Dropdown]
-5. Sort on Name, ETA, ratings, location [Dropdown]
-6. Favorites [Mark the resturant as favorites, Top Right - Checkbox]
-7. On app, Top right [A slider when "ON", show the restaurants which are marked as fav][Persistent][localStorage]
+5. Sort on Name, ETA, ratings, location[from address] [Dropdown]
+6. Show the restaurants from minPrice to maxPrice (Use dragger - slider) (Based on avgBill2) (minPrice - maxPrice)
+7. Favorites [Mark the restaurant as favorites, Top Right - Checkbox]
+8. On app, Top right [A slider when "ON", show the restaurants which are marked as fav][Persistent][localStorage]
+9. Show all the address data in the card
+10. Show the website and description in the card
 
 Extra marks:
-1. Debounced
+1. Debounced function
 2. Event delegation
 3. _loadash functions use
 4. Pagination
