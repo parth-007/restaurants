@@ -56,3 +56,4 @@ Extra marks:
 2. Event delegation
 3. _loadash functions use
 4. Pagination
+5. Multi filters
