@@ -10,7 +10,7 @@ Restaurants =
 		avgBill2: 433,
 		tags: ["American", "Chinese", "Healthy"],
 		address: {
-			location: "AAA",
+			locality: "AAA",
 			line1: "GG",
 			line2: "FGDG",
 			phone: 4343
@@ -27,7 +27,7 @@ Restaurants =
 		avgBill2: 433,
 		tags: ["Mexican", "Chinese", "Quick"],	
 		address: {
-			location: "GDF",
+			locality: "GDF",
 			line1: "CC",
 			line2: "QQ",
 			phone: 1212
@@ -37,6 +37,30 @@ Restaurants =
 	{...},
 	...
 ];
+
+Restaurant Data structure:
+
+{
+	id: ,
+	name: "",
+	website: "",
+	ETA: ,
+	ratings: ,
+	description: "",
+	avgBill2: ,
+	tags: ["", "", ""],	
+	address: {
+		locality: "",
+		line1: "",
+		line2: "",
+		phone: 
+	},
+	pic: "https://picsum.photos/500/350"
+}
+
+Tags can be: Healthy, Quick, South-Indian, Chinese, Japanese, Italian, Mexican, Punjabi
+locality can be: Trenton, Qubec, Zodiac, Morrica, Neotran, Plazma
+Ratings range from: 1 to 5
 
 Ask:
 Develop using React, TypeScript
