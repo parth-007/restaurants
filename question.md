@@ -1,4 +1,5 @@
-Restaurants = 
+```js
+**Restaurants** = 
 [
 	{
 		id: 123,
@@ -37,9 +38,10 @@ Restaurants =
 	{...},
 	...
 ];
+```
 
-Restaurant Data structure:
-
+**Restaurant Data structure:**
+```js
 {
 	id: ,
 	name: "",
@@ -57,13 +59,14 @@ Restaurant Data structure:
 	},
 	pic: "https://picsum.photos/500/350"
 }
+```
 
-Tags can be: Healthy, Quick, South-Indian, Chinese, Japanese, Italian, Mexican, Punjabi
-locality can be: Trenton, Qubec, Zodiac, Morrica, Neotran, Plazma
-Ratings range from: 1 to 5
-
-Ask:
-Develop using React, TypeScript
+- Tags can be: *Healthy, Quick, South-Indian, Chinese, Japanese, Italian, Mexican, Punjabi*   
+- locality can be: *Trenton, Qubec, Zodiac, Morrica, Neotran, Plazma*   
+- Ratings range from: *1 to 5*
+   
+**TODO:**   
+*Develop the web application using React, TypeScript, HTML and CSS:*
 1. Show data in console [Fetch API]
 2. Render restaurants cards
 3. Search bar [Search on name]
@@ -76,7 +79,7 @@ Develop using React, TypeScript
 10. Show the website and description in the card
 11. Auto fill (Auto suggestions), When typed something in the search bar, show a div with suggested max-items to 5, as a auto suggestions listbox [Implement Debouncing on this]
 
-Extra points:
+**Extra points:**
 1. Debounced function
 2. Event delegation
 3. _loadash functions use
