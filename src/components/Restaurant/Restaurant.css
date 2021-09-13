@@ -22,11 +22,14 @@
 }
 
 .r-name {
+    color: blue;
     text-transform: uppercase;
 }
 
 .r-pic {
+    border: 1px groove cadetblue;
     height: 180px;
+    margin: 2px;
     width: 260px;
 }
 
