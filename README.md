@@ -3,4 +3,4 @@
 We will be using the following API to get Restaurants data:   
 https://my-restaurants-api.herokuapp.com/restaurants
 
-Check *[Questions](https://github.com/parth-007/restaurants/blob/main/question.md)* to see what we are developing.
+Check *[Problem Statement](https://github.com/parth-007/restaurants/blob/main/Problem.md)* to see what we are developing.
