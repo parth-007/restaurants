@@ -39,9 +39,9 @@ Restaurants =
 ];
 
 Ask:
-Develop using HTML, CSS and Vanila JS
+Develop using React, TypeScript
 1. Show data in console [Fetch API]
-2. Render cards
+2. Render restaurants cards
 3. Search bar [Search on name]
 4. Filter on Tags [Dropdown]
 5. Sort on Name, ETA, ratings, location[from address] [Dropdown]
@@ -50,10 +50,12 @@ Develop using HTML, CSS and Vanila JS
 8. On app, Top right [A slider when "ON", show the restaurants which are marked as fav][Persistent][localStorage]
 9. Show all the address data in the card
 10. Show the website and description in the card
+11. Auto fill (Auto suggestions), When typed something in the search bar, show a div with suggested max-items to 5, as a auto suggestions listbox [Implement Debouncing on this]
 
-Extra marks:
+Extra points:
 1. Debounced function
 2. Event delegation
 3. _loadash functions use
 4. Pagination
 5. Multi filters
+6. Hide restaurants
