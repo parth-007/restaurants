@@ -1,6 +1,8 @@
+import './Filters.css';
+
 const Filters = () => {
     return (
-        <div>Filters</div>
+        <div className='filters-panel'>Filters</div>
     );
 }
 

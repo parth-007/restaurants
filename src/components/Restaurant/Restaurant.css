@@ -1,0 +1,59 @@
+.card {
+    border: 1px solid skyblue;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 5px;
+    margin: 5px 0;
+    flex-basis: 200px;
+}
+
+.card:nth-child(n) {
+    background: lavender;
+}
+
+.card:nth-child(2n+1) {
+    background: lightblue;
+}
+
+.card-details {
+    display: flex;
+    margin-left: 10px;
+    padding-left: 10px;
+}
+
+.r-name {
+    text-transform: uppercase;
+}
+
+.r-pic {
+    height: 180px;
+    width: 260px;
+}
+
+.title {
+    font-weight: 500;
+}
+
+span {
+    display: flex;
+}
+
+.italics {
+    font-style: italic;
+}
+
+.r-desc {
+    padding: 5px 0;
+    text-decoration: underline;
+    width: 450px;
+}
+
+.address-line {
+    width: 300px;
+}
+
+.ellipsis {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}

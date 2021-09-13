@@ -5,7 +5,7 @@ export interface Address {
     phone: number
 }
 
-export interface Restaurant {
+export interface RestaurantData {
     id: number,
     name: string,
     website: string,
