@@ -1,15 +1,15 @@
+**Restaurants =**
 ```js
-**Restaurants** = 
 [
 	{
-		id: 123,
+		id: 1,
 		name: "ABC",
 		website: "www.abc.com",
 		ETA: 25,
 		ratings: 4.3,
 		description: "FGDSFDGFS",
 		avgBill2: 433,
-		tags: ["American", "Chinese", "Healthy"],
+		tags: ["Mexican", "Chinese", "Healthy"],
 		address: {
 			locality: "AAA",
 			line1: "GG",
@@ -19,7 +19,7 @@
 		pic: "..............."		
 	},
 	{
-		id: 234,
+		id: 2,
 		name: "PQR",
 		website: "www.pqr.com",
 		ETA: 30,
@@ -61,12 +61,12 @@
 }
 ```
 
-- Tags can be: *Healthy, Quick, South-Indian, Chinese, Japanese, Italian, Mexican, Punjabi*   
-- locality can be: *Trenton, Qubec, Zodiac, Morrica, Neotran, Plazma*   
-- Ratings range from: *1 to 5*
-   
+- **tags** can be: *Healthy, Quick, South-Indian, Chinese, Japanese, Italian, Mexican, Punjabi*.  
+- **locality** can be: *Trenton, Qubec, Zodiac, Morrica, Neotran, Plazma*.
+- **ratings** will range from: *1 to 5*.
+      
 **TODO:**   
-*Develop the web application using React, TypeScript, HTML and CSS:*
+*Develop a web application using React, TypeScript, HTML and CSS:*
 1. Show data in console [Fetch API]
 2. Render restaurants cards
 3. Search bar [Search on name]
