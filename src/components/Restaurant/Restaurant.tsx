@@ -4,7 +4,7 @@ import { RestaurantData } from "../../models";
 const Restaurant: React.FC<RestaurantData> = (data: RestaurantData) => {
     return (
         <div className='card'>
-            <img className='r-pic' src={data.pic} />
+            <img alt='Restaurant Image' role='presentation' className='r-pic' src={data.pic} />
             <div className='card-details'>
                 <div className='general-details'>
                     <span className='r-name title'>{data.name}</span>

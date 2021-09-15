@@ -1,29 +1,14 @@
 import './Restaurants.css'
-import React, { useState, useEffect } from 'react';
-import Sort from '../Sort/Sort';
+import React from 'react';
 import Restaurant from '../Restaurant/Restaurant';
-import { RestaurantData } from '../../models';
+import { RData } from '../../models';
 
-const Restaurants = () => {
-
-    const [restaurants, setRestaurants] = useState([]);
-
-    useEffect(() => {
-        const url = 'https://my-restaurants-api.herokuapp.com/restaurants';
-        const fetchRestaurants = async () => {
-            await fetch(url).
-                then(res => res.json()).
-                then(data => setRestaurants(data)).
-                catch(e => console.error(e));
-        }
-
-        fetchRestaurants();
-    }, []);
+const Restaurants: React.FC<RData> = (restaurantsData: RData) => {
+    const rData = restaurantsData.data;
 
     return (
         <div className='data-container'>
-            <Sort />
-            {restaurants.map((r: RestaurantData) => <Restaurant key={r.id} {...r} />)}
+            {!restaurantsData ? 'Data Not available yet!' : rData.map(d => <Restaurant key={d.id} {...d}/>)}
         </div>
     );
 }

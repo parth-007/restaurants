@@ -8,3 +8,7 @@
     display: flex;
     height: 100%;
 }
+
+.restaurants-container {
+    flex: 80;
+}

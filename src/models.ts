@@ -17,3 +17,11 @@ export interface RestaurantData {
     address: Address,
     pic: string
 }
+
+export interface RData {
+    data: RestaurantData[]
+}
+
+export interface SortInterface {
+    sortHandler: (param: string | number) => void
+}

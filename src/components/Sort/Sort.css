@@ -1,0 +1,16 @@
+.sort-container {
+    margin: 5px 0;
+    padding: 10px 0;
+}
+
+.content {
+    display: inline-block;
+}
+
+.sort-radio {
+    margin-right: 10px;
+}
+
+.sort-header {
+    font-weight: 500;
+}

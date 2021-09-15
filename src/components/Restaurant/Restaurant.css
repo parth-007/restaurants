@@ -37,10 +37,6 @@
     font-weight: 500;
 }
 
-span {
-    display: flex;
-}
-
 .italics {
     font-style: italic;
 }
@@ -59,4 +55,9 @@ span {
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+}
+
+.general-details span,
+.address-details span {
+    display: flex;
 }
