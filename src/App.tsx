@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import './App.css';
 import Filters from './components/Filters/Filters';
 import Footer from './components/Footer/Footer';
+import Pagination from './components/Pagination/Pagination';
 import Restaurants from './components/Restaurants/Restaurants';
 import SearchHeader from './components/SearchHeader/SearchHeader';
 import Sort from './components/Sort/Sort';
@@ -11,11 +12,13 @@ import { RestaurantData } from './models';
 function App() {
   const [restaurants, setRestaurants] = useState<RestaurantData[]>([]);
   const [currentPage, setCurrentPage] = useState(1);
-  const [restaurantsPerPage, setRestaurantsPerPage] = useState(5);
+  const [restaurantsPerPage] = useState(5);
 
-  // const indexOfLastRestaurant = currentPage * restaurantsPerPage;
-  // const indexOfFirstRestaurant = indexOfLastRestaurant - restaurantsPerPage;
-  // const currentRestaurants = restaurants.slice(indexOfFirstRestaurant, indexOfLastRestaurant);
+  const indexOfLastRestaurant = currentPage * restaurantsPerPage;
+  const indexOfFirstRestaurant = indexOfLastRestaurant - restaurantsPerPage;
+  const currentRestaurants = restaurants.slice(indexOfFirstRestaurant, indexOfLastRestaurant);
+
+  const paginate = (pageNumber: number) => setCurrentPage(pageNumber);
   
   useEffect(() => {
     const url = 'https://my-restaurants-api.herokuapp.com/restaurants';
@@ -50,8 +53,8 @@ function App() {
         <Filters />
         <div className="restaurants-container">
           <Sort sortHandler={sortRestaurants}/>
-          <Restaurants data={restaurants}/>
-
+          <Restaurants data={currentRestaurants}/>
+          <Pagination restaurantsPerPage={restaurantsPerPage} totalRestaurants={restaurants.length} paginate={paginate}/>
         </div>
       </div>
       <Footer />
