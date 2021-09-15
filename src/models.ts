@@ -23,7 +23,7 @@ export interface RData {
 }
 
 export interface SortInterface {
-    sortHandler: (param: string | number) => void;
+    sortHandler: (param: string | number, type: string) => void;
 }
 
 export interface PaginationInterface {

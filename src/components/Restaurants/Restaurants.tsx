@@ -1,6 +1,7 @@
 import './Restaurants.css'
 import React from 'react';
 import Restaurant from '../Restaurant/Restaurant';
+import Spinner from '../Spinner/Spinner';
 import { RData } from '../../models';
 
 const Restaurants: React.FC<RData> = (restaurantsData: RData) => {
@@ -8,7 +9,7 @@ const Restaurants: React.FC<RData> = (restaurantsData: RData) => {
 
     return (
         <div className='data-container'>
-            {!restaurantsData ? 'Data Not available yet!' : rData.map(d => <Restaurant key={d.id} {...d}/>)}
+            {!restaurantsData ? <Spinner /> : rData.map(data => <Restaurant key={data.id} {...data}/>)}
         </div>
     );
 }

@@ -1,5 +1,5 @@
 import './Pagination.css';
-import React, { useState } from 'react';
+import React from 'react';
 import { PaginationInterface } from '../../models';
 
 const Pagination:React.FC<PaginationInterface> = ({totalRestaurants, restaurantsPerPage, paginate}) => {
