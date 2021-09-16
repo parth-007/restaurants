@@ -3,11 +3,11 @@ import { useState } from 'react';
 import { customSortOptions, sortTypes } from "../../constants";
 import { SortInterface } from '../../models';
 
-const Sort:React.FC<SortInterface> = (props) => {
+const Sort: React.FC<SortInterface> = (props) => {
 
     const [sortType, setSortType] = useState('ascending');
 
-    const handleParamChange = (e:React.ChangeEvent<HTMLInputElement>) => {
+    const handleParamChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         props.sortHandler(e.target.value, sortType);
     }
 
@@ -21,7 +21,7 @@ const Sort:React.FC<SortInterface> = (props) => {
                 {sortTypes.map((type) => (
                     <span className='sort-radio'>
                         <span className='content'>{type}</span>&nbsp;
-                        <input type='radio' name='sortType' value={type.toLocaleLowerCase()} onChange={e => setSortType(e.target.value)}/>
+                        <input type='radio' name='sortType' value={type.toLocaleLowerCase()} onChange={e => setSortType(e.target.value)} />
                     </span>
                 ))}
             </div>
@@ -32,7 +32,7 @@ const Sort:React.FC<SortInterface> = (props) => {
                 {customSortOptions.map((option) => (
                     <span className='sort-radio'>
                         <span className='content'>{option}</span>&nbsp;
-                        <input type='radio' name='sort' value={option.toLocaleLowerCase()} onChange={e => handleParamChange(e)}/>
+                        <input type='radio' name='sort' value={option.toLocaleLowerCase()} onChange={e => handleParamChange(e)} />
                     </span>
                 ))}
             </div>

@@ -1,10 +1,11 @@
 import './Footer.css';
+import { footerNote } from '../../constants';
 
 const Footer = () => {
     return (
         <div className='footer-container'>
             <span>&#169;</span>
-            All rights reserved!
+            {footerNote}
             <span>{new Date().getFullYear()}</span>
         </div>
     );

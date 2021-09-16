@@ -5,3 +5,5 @@ export const customSortOptions: string[] = [
 export const sortTypes: string[] = [
     'Ascending', 'Descending'
 ];
+
+export const footerNote = 'All rights reserved!';

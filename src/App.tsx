@@ -6,7 +6,7 @@ import { RestaurantData } from './models';
 function App() {
   const [restaurants, setRestaurants] = useState<RestaurantData[]>([]);
   const [currentPage, setCurrentPage] = useState(1);
-  const [restaurantsPerPage] = useState(5);
+  const restaurantsPerPage = 5;
 
   const indexOfLastRestaurant = currentPage * restaurantsPerPage;
   const indexOfFirstRestaurant = indexOfLastRestaurant - restaurantsPerPage;

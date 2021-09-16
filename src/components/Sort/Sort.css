@@ -1,25 +1,25 @@
 .sort-container {
-    margin: 5px 0;
-    padding: 10px 0;
+  padding: 10px 0;
+  margin: 2px 0;
 }
 
 .content {
-    display: inline-block;
+  display: inline-block;
 }
 
 .sort-set {
-    margin-top: 5px;
+  margin-top: 5px;
 }
 
 .sort-radio {
-    margin: 0 10px;
+  margin: 0 10px;
 }
 
 .sort-header {
-    font-weight: 600;
+  font-weight: 600;
 }
 
 .sort-option-header {
-    font-weight: 500;
-    margin: 0 10px;
+  font-weight: 500;
+  margin: 0 10px;
 }

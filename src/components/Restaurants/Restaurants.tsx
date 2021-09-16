@@ -9,7 +9,7 @@ const Restaurants: React.FC<RData> = (restaurantsData: RData) => {
 
     return (
         <div className='data-container'>
-            {!restaurantsData ? <Spinner /> : rData.map(data => <Restaurant key={data.id} {...data}/>)}
+            {!restaurantsData ? <Spinner /> : rData.map(data => <Restaurant key={data.id} {...data} />)}
         </div>
     );
 }
