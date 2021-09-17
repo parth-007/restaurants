@@ -1,4 +1,14 @@
 .data-container {
-    flex: 80;
-    /* background: lime; */
+  flex: 80;
+  width: 800px;
+  margin: 0 auto;
+}
+
+.no-data {
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  background: cornflowerblue;
+  height: 32px;
+  align-items: center;
 }

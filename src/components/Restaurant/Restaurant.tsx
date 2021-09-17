@@ -7,19 +7,19 @@ const Restaurant: React.FC<RestaurantData> = (data: RestaurantData) => {
             <img alt='Restaurant' role='presentation' className='r-pic' src={data.pic} />
             <div className='card-details'>
                 <div className='general-details'>
-                    <span className='r-name title'>{data.name}</span>
-                    <a href='#'>{data.website}</a>
-                    <span><span className='title'>Avg. Bill for Two:&nbsp;</span> {data.avgBillFor2}</span>
-                    <span><span className='title'>Tags:&nbsp;</span> {data.tags.join(', ')} </span>
-                    <span><span className='title'>Est. Time:&nbsp;</span> {data.ETA} {'Minutes'} </span>
-                    <span><span className='title'>Ratings:&nbsp;</span> {data.ratings}{'/5'} </span>
-                    <span className='italics ellipsis r-desc'>{data.description}</span>
+                    <div className='r-name title'>{data.name}</div>
+                    <a href='!#'>{data.website}</a>
+                    <div className='title'>Avg. Bill for Two:&nbsp;<span> {data.avgBillFor2}</span></div>
+                    <div className='title tags'>Tags:&nbsp; <span>{data.tags.join(', ')}</span> </div>
+                    <div className='title'>Est.Time:&nbsp; <span>{data.ETA} {'Minutes'}</span> </div>
+                    <div className='title'>Ratings:&nbsp; <span>{data.ratings}{'/5'} </span></div>
+                    <div className='italics ellipsis r-desc'>{data.description}</div>
                 </div>
                 <div className='address-details'>
-                    <span className='title'>Address:</span>
-                    <span className='ellipsis address-line'>{data.address.line1 + ", " + data.address.line2}</span>
-                    <span>{data.address.locality}</span>
-                    <span className='italics'>{data.address.phone}</span>
+                    <div className='title'>Address:</div>
+                    <div className='ellipsis address-line'>{data.address.line1 + ", " + data.address.line2}</div>
+                    <div>{data.address.locality}</div>
+                    <div className='italics'>{data.address.phone}</div>
                 </div>
             </div>
         </div>

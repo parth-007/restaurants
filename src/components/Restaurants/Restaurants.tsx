@@ -5,6 +5,11 @@ import Spinner from '../Spinner/Spinner';
 import { RData } from '../../models';
 
 const Restaurants: React.FC<RData> = (restaurantsData: RData) => {
+    if (restaurantsData.data.length === 0) {
+        return (
+            <div className='no-data'>No data Found!</div>
+        );
+    }
     const rData = restaurantsData.data;
 
     return (

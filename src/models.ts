@@ -31,3 +31,11 @@ export interface PaginationInterface {
     totalRestaurants: number;
     paginate: (param: number) => void;
 }
+
+export interface SearchHeaderInterface {
+    searchRestaurants: (keyword: string) => void;
+}
+
+export interface FiltersInterface {
+    filterTags: (filters: Map<string, boolean>) => void;
+}

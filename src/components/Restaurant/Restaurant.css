@@ -1,63 +1,81 @@
 .card {
-    border: 1px solid skyblue;
-    display: flex;
-    flex-wrap: wrap;
-    padding: 5px;
-    margin: 5px 0;
-    flex-basis: 200px;
+  border: 1px solid skyblue;
+  display: flex;
+  /* flex-wrap: wrap; */
+  padding: 11px;
+  margin: 10px 0;
+  /* flex-basis: 200px; */
 }
 
 .card:nth-child(n) {
-    background: lavender;
+  background: lavender;
 }
 
-.card:nth-child(2n+1) {
-    background: lightblue;
+.card:nth-child(2n + 1) {
+  background: lightblue;
 }
 
 .card-details {
-    display: flex;
-    margin-left: 10px;
-    padding-left: 10px;
+  display: flex;
+  margin-left: 10px;
 }
 
 .r-name {
-    color: blue;
-    text-transform: uppercase;
+  color: blue;
+  text-transform: uppercase;
 }
 
 .r-pic {
-    border: 1px groove cadetblue;
-    height: 180px;
-    margin: 2px;
-    width: 260px;
+  cursor: pointer;
+  border-radius: 2px;
+  height: 180px;
+  margin: 2px;
+  width: 260px;
+}
+
+.r-pic:hover {
+  transform-origin: center;
+  animation: scale 1000ms ease-in-out forwards;
+}
+
+@keyframes scale {
+  to {
+    transform: scale(1.05);
+  }
 }
 
 .title {
-    font-weight: 500;
+  font-weight: 500;
+}
+
+.title span {
+  font-weight: 400;
 }
 
 .italics {
-    font-style: italic;
+  font-style: italic;
 }
 
 .r-desc {
-    padding: 5px 0;
-    text-decoration: underline;
-    width: 450px;
+  padding: 5px 0;
+  text-decoration: underline;
+  width: 450px;
 }
 
 .address-line {
-    width: 300px;
+  width: 200px;
 }
 
 .ellipsis {
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
-.general-details span,
-.address-details span {
-    display: flex;
+.general-details,
+.tags {
+  max-width: 300px;
+}
+
+.address-details {
+  max-width: 200px;
 }

@@ -58,11 +58,27 @@ function App() {
     }
   }
 
+  const searchRestaurants = (keyword: string) => {
+    if (keyword !== '') {
+      setRestaurants([...restaurants].filter((r) => r.name.toLowerCase() === keyword.toLowerCase()));
+    }
+  }
+
+  const filterTags = (tags: Map<string, boolean>) => {
+    if (tags.size === 0) return;
+
+    let appliedTags = [];
+    for (const [key] of tags) {
+      appliedTags.push(key);
+    }
+    console.log(appliedTags);
+  }
+
   return (
     <div className="App">
-      <SearchHeader />
+      <SearchHeader searchRestaurants={searchRestaurants} />
       <div className="container">
-        <Filters />
+        <Filters filterTags={filterTags} />
         <div className="restaurants-container">
           <Sort sortHandler={sortRestaurants} />
           <Restaurants data={currentRestaurants} />

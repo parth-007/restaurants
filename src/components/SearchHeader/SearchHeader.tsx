@@ -1,12 +1,18 @@
 import './SearchHeader.css';
 import { useState } from 'react';
+import { SearchHeaderInterface } from '../../models';
 
-const SearchHeader = () => {
+const SearchHeader: React.FC<SearchHeaderInterface> = (props) => {
     const [search, setSearch] = useState('');
+
+    const searchRestaurants = (searchKeyword: string) => {
+        props.searchRestaurants(searchKeyword);
+    }
+
     return (
         <div className="search-input">
             <input className='search-box' type="text" placeholder="Search Here!" onChange={e => setSearch(e.target.value)} />
-            <button className='search-action'>Search</button>
+            <button className='search-action' onClick={(e) => searchRestaurants(search)}>Search</button>
         </div>
     );
 }

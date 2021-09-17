@@ -1,4 +1,26 @@
 .filters-panel {
-    /* background: yellow; */
     flex: 20;
+}
+
+.tag-filters {
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+}
+
+.tag-container {
+    padding: 3px;
+    display: block;
+}
+
+.tag-name {
+    margin-left: 10px;
+    font-size: 14px;
+}
+
+.tags-filters-action {
+    padding: 5px;
+    text-align: center;
+    width: 170px;
+    margin: 10px auto;
 }
