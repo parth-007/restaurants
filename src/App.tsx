@@ -1,7 +1,7 @@
 import './App.css';
 import React, { useEffect, useState } from 'react';
-import { Filters, Footer, Pagination, Restaurants, SearchHeader, Sort } from './components';
-import { sortTypes } from './constants';
+import { PriceFilters, TagFilters, Footer, Pagination, Restaurants, SearchHeader, Sort } from './components';
+import { restaurantsPerPage, sortTypes } from './constants';
 import { RestaurantData } from './models';
 
 function App() {
@@ -10,7 +10,6 @@ function App() {
 
   const [minMaxRange, setMinMaxRange] = useState([0, 1100]);
 
-  const restaurantsPerPage = 5;
   const indexOfLastRestaurant = currentPage * restaurantsPerPage;
   const indexOfFirstRestaurant = indexOfLastRestaurant - restaurantsPerPage;
   const currentRestaurants = restaurants.slice(indexOfFirstRestaurant, indexOfLastRestaurant);
@@ -97,11 +96,18 @@ function App() {
     setRestaurants([...restaurants].filter(r => (appliedTags.every((tag) => r.tags.includes(tag)))));
   }
 
+  const handleSliderChange = (range: number[]) => {
+    setRestaurants([...restaurants].filter((r) => r.avgBillFor2 >= range[0] && r.avgBillFor2 <= range[1]));
+  }
+
   return (
     <div className="App">
       <SearchHeader searchRestaurants={searchRestaurants} />
       <div className="container">
-        <Filters filterTags={filterTags} range={minMaxRange}/>
+        <div className='filters-container'>
+        <TagFilters filterTags={filterTags}/>
+        <PriceFilters range={minMaxRange} handleSliderChange={handleSliderChange}/>
+        </div>
         <div className="restaurants-container">
           <Sort sortHandler={sortRestaurants} />
           <Restaurants data={currentRestaurants} />

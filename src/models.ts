@@ -38,9 +38,9 @@ export interface SearchHeaderInterface {
 
 export interface FiltersInterface {
     filterTags: (filters: Map<string, boolean>) => void;
-    range: number[];
 }
 
 export interface SliderInterface {
     range: number[];
+    handleSliderChange: (range: number[]) => void;
 }

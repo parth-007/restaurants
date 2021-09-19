@@ -1,9 +1,9 @@
-import './CustomSlider.css';
+import './PriceFilters.css';
 import { useState } from 'react';
 import Slider from '@mui/material/Slider';
-import { SliderInterface } from '../../models';
+import { SliderInterface } from '../../../models';
 
-const CustomSlider: React.FC<SliderInterface> = (props) => {
+const PriceFilters: React.FC<SliderInterface> = (props) => {
   const minRange = props.range[0];
   const maxRange = props.range[1];
   const [rangeSlicerValue, setRangeSlicerValue] = useState<number[]>([minRange, maxRange]);
@@ -23,9 +23,9 @@ const CustomSlider: React.FC<SliderInterface> = (props) => {
         valueLabelDisplay="auto"
         min={minRange - 50}
         max={maxRange + 50} />
-      <button className='action-btn'>Filter Restaurants!</button>
+      <button className='action-btn' onClick={() => props.handleSliderChange(rangeSlicerValue)}>Filter Restaurants!</button>
     </div>
 
   );
 }
-export default CustomSlider;
+export default PriceFilters;

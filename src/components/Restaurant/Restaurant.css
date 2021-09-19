@@ -1,10 +1,9 @@
 .card {
   border: 1px solid skyblue;
+  box-shadow: 2px 3px 7px 3px #ccffcc;
   display: flex;
-  /* flex-wrap: wrap; */
   padding: 11px;
   margin: 10px 0;
-  /* flex-basis: 200px; */
 }
 
 .card:nth-child(n) {
@@ -35,7 +34,7 @@
 
 .r-pic:hover {
   transform-origin: center;
-  animation: scale 1000ms ease-in-out forwards;
+  animation: scale 250ms ease-in-out forwards;
 }
 
 @keyframes scale {

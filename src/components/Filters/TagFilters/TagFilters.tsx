@@ -1,10 +1,9 @@
-import './Filters.css';
+import './TagFilters.css';
 import React, { useState } from 'react';
-import CustomSlider from '../CustomSlider/CustomSlider';
-import { tags } from '../../constants';
-import { FiltersInterface } from '../../models';
+import { tags } from '../../../constants';
+import { FiltersInterface } from '../../../models';
 
-const Filters: React.FC<FiltersInterface> = (props) => {
+const TagFilters: React.FC<FiltersInterface> = (props) => {
     const [checkedTagsMap, setCheckedTagsMap] = useState<Map<string, boolean>>(new Map());
 
     const handleOnChange = (tagName: string) => {
@@ -38,10 +37,8 @@ const Filters: React.FC<FiltersInterface> = (props) => {
 
                 <button className='action-btn' onClick={() => checkedTagsMap && props.filterTags(checkedTagsMap)}>Filter Restaurants!</button>
             </div>
-
-            <CustomSlider range={props.range}/>
         </div>
     );
 }
 
-export default Filters;
+export default TagFilters;

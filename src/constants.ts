@@ -10,4 +10,6 @@ export const tags: string[] = [
     'Healthy', 'Quick', 'South-Indian', 'Italian', 'Mexican', 'Japanese', 'Chinese', 'Punjabi'
 ];
 
+export const restaurantsPerPage = 5;
+
 export const footerNote = 'All rights reserved!';

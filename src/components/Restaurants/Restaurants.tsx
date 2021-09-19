@@ -4,17 +4,17 @@ import Restaurant from '../Restaurant/Restaurant';
 import Spinner from '../Spinner/Spinner';
 import { RData } from '../../models';
 
-const Restaurants: React.FC<RData> = (restaurantsData: RData) => {
-    if (restaurantsData.data.length === 0) {
+const Restaurants: React.FC<RData> = (props) => {
+    const {data} = props;
+    if (data.length === 0) {
         return (
             <div className='no-data'>No data Found!</div>
         );
     }
-    const rData = restaurantsData.data;
 
     return (
         <div className='data-container'>
-            {!restaurantsData ? <Spinner /> : rData.map(data => <Restaurant key={data.id} {...data} />)}
+            {data ? data.map(data => (<Restaurant key={data.id} {...data} />)) : <Spinner />}
         </div>
     );
 }
