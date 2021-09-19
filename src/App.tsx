@@ -8,7 +8,7 @@ function App() {
   const [restaurants, setRestaurants] = useState<RestaurantData[]>([]);
   const [currentPage, setCurrentPage] = useState(1);
 
-  const [minMaxRange, setMinMaxRange] = useState([0, 0]);
+  const [minMaxRange, setMinMaxRange] = useState([0, 1100]);
 
   const restaurantsPerPage = 5;
   const indexOfLastRestaurant = currentPage * restaurantsPerPage;
@@ -101,7 +101,7 @@ function App() {
     <div className="App">
       <SearchHeader searchRestaurants={searchRestaurants} />
       <div className="container">
-        <Filters filterTags={filterTags} minMaxRange={minMaxRange} />
+        <Filters filterTags={filterTags} range={minMaxRange}/>
         <div className="restaurants-container">
           <Sort sortHandler={sortRestaurants} />
           <Restaurants data={currentRestaurants} />

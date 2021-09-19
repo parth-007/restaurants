@@ -38,5 +38,9 @@ export interface SearchHeaderInterface {
 
 export interface FiltersInterface {
     filterTags: (filters: Map<string, boolean>) => void;
-    minMaxRange: number[]
+    range: number[];
+}
+
+export interface SliderInterface {
+    range: number[];
 }

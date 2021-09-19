@@ -1,5 +1,6 @@
 import './Filters.css';
-import { useState } from 'react';
+import React, { useState } from 'react';
+import CustomSlider from '../CustomSlider/CustomSlider';
 import { tags } from '../../constants';
 import { FiltersInterface } from '../../models';
 
@@ -35,11 +36,10 @@ const Filters: React.FC<FiltersInterface> = (props) => {
                     </label>
                 ))}
 
-                <button className='tags-filters-action' onClick={() => checkedTagsMap && props.filterTags(checkedTagsMap)}>Filter Restaurants!</button>
+                <button className='action-btn' onClick={() => checkedTagsMap && props.filterTags(checkedTagsMap)}>Filter Restaurants!</button>
             </div>
 
-            <div className='price-filters'>
-            </div>
+            <CustomSlider range={props.range}/>
         </div>
     );
 }

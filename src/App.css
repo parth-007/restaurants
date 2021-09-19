@@ -13,3 +13,18 @@
 .restaurants-container {
     flex: 80;
 }
+
+.action-btn {
+    cursor: pointer;
+    width: 150px;
+    margin: 10px auto;
+    margin-top: 10px !important;
+    color: #fff;
+    background-color: #007bff;
+    border: 1px solid #007bff;
+    padding: 6px 12px;
+    font-size: 13px;
+    line-height: 1.5;
+    border-radius: 4px;
+    transition: color .15s
+}
