@@ -1,6 +1,7 @@
-import React, { useEffect, useState } from 'react';
 import './App.css';
+import React, { useEffect, useState } from 'react';
 import { Filters, Footer, Pagination, Restaurants, SearchHeader, Sort } from './components';
+import { sortTypes } from './constants';
 import { RestaurantData } from './models';
 
 function App() {
@@ -24,7 +25,7 @@ function App() {
   }, []);
 
   const sortRestaurants = (param: string | number, sortType: string) => {
-    if (sortType === 'ascending') {
+    if (sortType === sortTypes[0].toLowerCase()) {
       switch (param) {
         case 'name':
           setRestaurants([...restaurants].sort((rA: RestaurantData, rB: RestaurantData) => rA.name > rB.name ? 1 : -1));
