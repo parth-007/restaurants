@@ -39,7 +39,6 @@ const Filters: React.FC<FiltersInterface> = (props) => {
             </div>
 
             <div className='price-filters'>
-
             </div>
         </div>
     );

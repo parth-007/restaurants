@@ -7,22 +7,38 @@ import { RestaurantData } from './models';
 function App() {
   const [restaurants, setRestaurants] = useState<RestaurantData[]>([]);
   const [currentPage, setCurrentPage] = useState(1);
-  const restaurantsPerPage = 5;
 
+  const [minMaxRange, setMinMaxRange] = useState([0, 0]);
+
+  const restaurantsPerPage = 5;
   const indexOfLastRestaurant = currentPage * restaurantsPerPage;
   const indexOfFirstRestaurant = indexOfLastRestaurant - restaurantsPerPage;
   const currentRestaurants = restaurants.slice(indexOfFirstRestaurant, indexOfLastRestaurant);
 
-  const paginate = (pageNumber: number) => setCurrentPage(pageNumber);
-
   useEffect(() => {
     const url = 'https://my-restaurants-api.herokuapp.com/restaurants';
     const fetchRestaurants = async () => {
-      await fetch(url).then(res => res.json()).then(data => setRestaurants(data)).catch(e => console.error(e));
+      await fetch(url).then(res => res.json())
+        .then(function(data) { 
+          setRestaurants(data);
+          process(data)})
+        .catch(e => console.error(e));
     }
-
+    
     fetchRestaurants();
   }, []);
+
+  const process = (data: RestaurantData[]) => {
+    let min = Number.POSITIVE_INFINITY;
+    let max = Number.NEGATIVE_INFINITY;
+    data.forEach(d => {
+      min = (Math.min(min, d.avgBillFor2));
+      max = (Math.max(max, d.avgBillFor2));
+    });
+    setMinMaxRange([min, max]);
+  }
+
+  const paginate = (pageNumber: number) => setCurrentPage(pageNumber);
 
   const sortRestaurants = (param: string | number, sortType: string) => {
     if (sortType === sortTypes[0].toLowerCase()) {
@@ -39,6 +55,9 @@ function App() {
         case 'ratings':
           setRestaurants([...restaurants].sort((rA: RestaurantData, rB: RestaurantData) => rA.ratings - rB.ratings));
           break;
+        case 'avgbillfor2':
+          setRestaurants([...restaurants].sort((rA: RestaurantData, rB: RestaurantData) => rA.avgBillFor2 - rB.avgBillFor2));
+          break;
       }
     }
     else {
@@ -54,6 +73,9 @@ function App() {
           break;
         case 'ratings':
           setRestaurants([...restaurants].sort((rA: RestaurantData, rB: RestaurantData) => rB.ratings - rA.ratings));
+          break;
+        case 'avgbillfor2':
+          setRestaurants([...restaurants].sort((rA: RestaurantData, rB: RestaurantData) => rB.avgBillFor2 - rA.avgBillFor2));
           break;
       }
     }
@@ -79,7 +101,7 @@ function App() {
     <div className="App">
       <SearchHeader searchRestaurants={searchRestaurants} />
       <div className="container">
-        <Filters filterTags={filterTags} />
+        <Filters filterTags={filterTags} minMaxRange={minMaxRange} />
         <div className="restaurants-container">
           <Sort sortHandler={sortRestaurants} />
           <Restaurants data={currentRestaurants} />
