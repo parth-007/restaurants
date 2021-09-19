@@ -68,11 +68,11 @@ function App() {
   const filterTags = (tags: Map<string, boolean>) => {
     if (tags.size === 0) return;
 
-    let appliedTags = [];
+    const appliedTags: string[] = [];
     for (const [key] of tags) {
       appliedTags.push(key);
     }
-    console.log(appliedTags);
+    setRestaurants([...restaurants].filter(r => (appliedTags.every((tag) => r.tags.includes(tag)))));
   }
 
   return (

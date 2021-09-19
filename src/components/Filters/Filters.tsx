@@ -8,11 +8,11 @@ const Filters: React.FC<FiltersInterface> = (props) => {
 
     const handleOnChange = (tagName: string) => {
         if (checkedTagsMap.has(tagName)) {
-            // Key exist
+            // Key exists
             const value = checkedTagsMap.get(tagName);
             checkedTagsMap.set(tagName, !value);
 
-            // If unchecked, remove key from map
+            // If tag is unchecked, remove key from map
             if (value) {
                 checkedTagsMap.delete(tagName);
             }
