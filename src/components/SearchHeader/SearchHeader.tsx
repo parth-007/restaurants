@@ -10,7 +10,7 @@ const SearchHeader: React.FC<SearchHeaderInterface> = (props) => {
     }
 
     return (
-        <div className="search-input d-flex">
+        <div className="search-input d-flex align-items-center justify-content-center">
             <input className='search-box' type="text" placeholder="Search Here!" onChange={e => setSearch(e.target.value)} />
             <button className='search-action' onClick={(e) => searchRestaurants(search)}>Search</button>
         </div>
