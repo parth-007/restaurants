@@ -21,4 +21,4 @@ const Pagination: React.FC<PaginationInterface> = ({ totalRestaurants, restauran
     )
 }
 
-export default Pagination
+export default Pagination;

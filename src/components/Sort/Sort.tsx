@@ -1,6 +1,6 @@
 import './Sort.css';
 import { useState } from 'react';
-import { customSortOptions, sortTypes } from "../../constants";
+import { customSortOptions, selectSortOptions, selectSortParameter, selectSortType, sortTypes } from "../../constants";
 import { SortInterface } from '../../models';
 
 const Sort: React.FC<SortInterface> = (props) => {
@@ -13,10 +13,10 @@ const Sort: React.FC<SortInterface> = (props) => {
 
     return (
         <div className='sort-container'>
-            <div className='sort-header'>Select Sort options:</div>
+            <div className='sort-header'>{selectSortOptions}</div>
             <div>
                 <div className='sort-option-header'>
-                    Select Sort type:
+                    {selectSortType}
                 </div>
                 {sortTypes.map((type) => (
                     <span className='sort-radio'>
@@ -27,7 +27,7 @@ const Sort: React.FC<SortInterface> = (props) => {
             </div>
             <div className='sort-set'>
                 <div className='sort-option-header'>
-                    Select Sort parameter:
+                    {selectSortParameter}
                 </div>
                 {customSortOptions.map((option) => (
                     <span className='sort-radio'>

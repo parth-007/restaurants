@@ -2,6 +2,7 @@ import './PriceFilters.css';
 import { useState } from 'react';
 import Slider from '@mui/material/Slider';
 import { SliderInterface } from '../../../models';
+import { filterRestaurants, selectPrice } from '../../../constants';
 
 const PriceFilters: React.FC<SliderInterface> = (props) => {
   const minRange = props.range[0];
@@ -15,7 +16,7 @@ const PriceFilters: React.FC<SliderInterface> = (props) => {
   return (
     <div className='price-filters d-flex'>
       <div className='price-filter-header'>
-        Select Min and Max Avg price for 2 people:
+      {selectPrice}
       </div>
       <Slider
         value={rangeSlicerValue}
@@ -23,7 +24,7 @@ const PriceFilters: React.FC<SliderInterface> = (props) => {
         valueLabelDisplay="auto"
         min={minRange - 50}
         max={maxRange + 50} />
-      <button className='action-btn' onClick={() => props.handleSliderChange(rangeSlicerValue)}>Filter Restaurants!</button>
+      <button className='action-btn' onClick={() => props.handleSliderChange(rangeSlicerValue)}>{filterRestaurants}</button>
     </div>
 
   );

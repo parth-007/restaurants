@@ -1,6 +1,6 @@
 import './TagFilters.css';
 import React, { useState } from 'react';
-import { tags } from '../../../constants';
+import { filterRestaurants, tagFilters, tags } from '../../../constants';
 import { FiltersInterface } from '../../../models';
 
 const TagFilters: React.FC<FiltersInterface> = (props) => {
@@ -27,7 +27,7 @@ const TagFilters: React.FC<FiltersInterface> = (props) => {
     return (
         <div className='filters-panel'>
             <div className='tag-filters d-flex'>
-                <label>Pick Filters:</label>
+                <label>{tagFilters}</label>
                 {tags.map((tag, index) => (
                     <label className='tag-container' htmlFor={`tag${index}`}>
                         <input type='checkbox' value={tag} id={`tag${index}`} name='tags' onChange={() => handleOnChange(tag)} />
@@ -35,7 +35,7 @@ const TagFilters: React.FC<FiltersInterface> = (props) => {
                     </label>
                 ))}
 
-                <button className='action-btn' onClick={() => checkedTagsMap && props.filterTags(checkedTagsMap)}>Filter Restaurants!</button>
+                <button className='action-btn' onClick={() => checkedTagsMap && props.filterTags(checkedTagsMap)}>{filterRestaurants}</button>
             </div>
         </div>
     );
