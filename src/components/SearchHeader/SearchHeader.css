@@ -1,7 +1,6 @@
 .search-input {
   background: #047bd5;
   padding: 5px;
-  display: flex;
   align-items: center;
   justify-content: center;
 }

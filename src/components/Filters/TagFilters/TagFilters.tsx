@@ -26,7 +26,7 @@ const TagFilters: React.FC<FiltersInterface> = (props) => {
 
     return (
         <div className='filters-panel'>
-            <div className='tag-filters'>
+            <div className='tag-filters d-flex'>
                 <label>Pick Filters:</label>
                 {tags.map((tag, index) => (
                     <label className='tag-container' htmlFor={`tag${index}`}>

@@ -5,7 +5,7 @@ import { SortInterface } from '../../models';
 
 const Sort: React.FC<SortInterface> = (props) => {
 
-    const [sortType, setSortType] = useState('ascending');
+    const [sortType, setSortType] = useState(sortTypes[0].toLowerCase());
 
     const handleParamChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         props.sortHandler(e.target.value, sortType);

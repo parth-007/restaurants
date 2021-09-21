@@ -8,7 +8,7 @@ const Restaurants: React.FC<RData> = (props) => {
     const {data} = props;
     if (data.length === 0) {
         return (
-            <div className='no-data'>No data Found!</div>
+            <div className='no-data d-flex'>No data Found!</div>
         );
     }
 

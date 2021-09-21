@@ -13,7 +13,7 @@ const PriceFilters: React.FC<SliderInterface> = (props) => {
   };
 
   return (
-    <div className='price-filters'>
+    <div className='price-filters d-flex'>
       <div className='price-filter-header'>
         Select Min and Max Avg price for 2 people:
       </div>

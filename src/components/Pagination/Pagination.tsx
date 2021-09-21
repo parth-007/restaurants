@@ -11,7 +11,7 @@ const Pagination: React.FC<PaginationInterface> = ({ totalRestaurants, restauran
 
     return (
         <nav>
-            <ul className='pagination-list'>
+            <ul className='pagination-list d-flex'>
                 {pageNumbers.map(number => (
                     <li key={number}>
                         <a className='page-link' href='#' onClick={() => paginate(number)}>{number}</a>

@@ -103,7 +103,7 @@ function App() {
   return (
     <div className="App">
       <SearchHeader searchRestaurants={searchRestaurants} />
-      <div className="container">
+      <div className="container d-flex">
         <div className='filters-container'>
         <TagFilters filterTags={filterTags}/>
         <PriceFilters range={minMaxRange} handleSliderChange={handleSliderChange}/>

@@ -1,7 +1,6 @@
 .card {
   border: 1px solid skyblue;
   box-shadow: 2px 3px 7px 3px #ccffcc;
-  display: flex;
   padding: 11px;
   margin: 10px 0;
 }
@@ -15,7 +14,6 @@
 }
 
 .card-details {
-  display: flex;
   margin-left: 10px;
 }
 
